@@ -22,9 +22,14 @@ data.forEach(item => {
     const img = document.createElement('img');
 
     img.src = "./assets/" + item.Image;
+    title.textContent = item.ObjectNumber;
+    p.textContent = item.Title;
+    p2.textContent = item.Brand;
+    p3.textContent = item.Owner;
+    p4.textContent = item.Location;
 
     buttonReset.addEventListener('click', function(){
-        div.style.display = "flex";
+        div.style.display = "block";
     });
 
     buttonLiving.addEventListener('click', function(){

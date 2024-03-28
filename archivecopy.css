@@ -4,6 +4,7 @@ body {
   height: 100vh;
   background-color: #ECE9E0;
   color: #333333;
+  font-size: 1.2rem;
 }
 
 
@@ -23,7 +24,7 @@ a:link {
 }
 
 hr {
-  border-bottom: solid #333333 1.5px;
+  border-bottom: solid #333333 3px;
 }
 
 .flex-container {
@@ -50,20 +51,17 @@ hr {
 img {
   max-width: 450px;
   filter: blur(1000px);
+  border: solid white 3px;
 
 }
 
 img:hover {
   filter: none;
-  border: solid #333333 1.5px;
-}
-
-div {
-  display: flex
+  border: solid #333333 3px;
 }
 
 button {
-  border: solid #333333 1.5px;
+  border: solid #333333 3px;
   border-radius: 999px;
   padding: 10px;
   padding-left: 20px;
@@ -72,5 +70,15 @@ button {
   color: #ECE9E0;
   text-transform: uppercase;
   margin-left: 10px;
+}
+
+title, p, h5 {
+  font-size: 14px;
+  text-align: left;
+}
+
+
+div {
+  display: inline-block;
 }
 
