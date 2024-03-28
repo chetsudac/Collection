@@ -23,10 +23,10 @@ data.forEach(item => {
 
     img.src = "./assets/" + item.Image;
     title.textContent = item.ObjectNumber;
-    p.textContent = item.Title;
-    p2.textContent = item.Brand;
-    p3.textContent = item.Owner;
-    p4.textContent = item.Location;
+    p.textContent = "Title: " + item.Title;
+    p2.textContent = "Brand: " + item.Brand;
+    p3.textContent = "Owner: " + item.Owner;
+    p4.textContent = "Location: " + item.Location;
 
     buttonReset.addEventListener('click', function(){
         div.style.display = "block";

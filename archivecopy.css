@@ -32,7 +32,6 @@ hr {
   text-align:left;
   font-size: 14px;
   line-height: 3px;
-  text-transform:uppercase;
   text-align: center;
   overflow: scroll;
 }
@@ -50,15 +49,16 @@ hr {
 
 img {
   max-width: 450px;
-  filter: blur(1000px);
-  border: solid white 3px;
-
+  border-top: solid #333333 3px;
+  border-bottom: solid #333333 3px;
+  border-left: solid #333333 3px;
+  filter:brightness(0.8);
 }
 
 img:hover {
-  filter: none;
-  border: solid #333333 3px;
+  filter: saturate(1);
 }
+
 
 button {
   border: solid #333333 3px;
@@ -66,19 +66,49 @@ button {
   padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #333333;
-  color: #ECE9E0;
+  background-color: #ECE9E0;
+  color: #333333;
   text-transform: uppercase;
   margin-left: 10px;
+  transition: ease-in-out 250ms;
 }
 
-title, p, h5 {
-  font-size: 14px;
-  text-align: left;
+#living:hover {
+  background-color: #B9B5AF;
+}
+
+#amps:hover {
+  background-color: #746D69;
+}
+#chas:hover {
+  background-color: #BDB0CA;
+}
+#karis:hover {
+  background-color:#A5B9DC;
+}
+#nops:hover {
+  background-color: #536858;
+}
+
+#all:hover {
+  background-color: gray;
+}
+
+h5, p {
+  font-size: 13px;
+  text-align: right;
+  padding-right: 1rem;
+  text-transform: uppercase;
 }
 
 
 div {
   display: inline-block;
 }
+
+div#jewelry {
+  border-bottom: solid #333333 3px;
+}
+
+
 
