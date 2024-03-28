@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="collection.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ieo1rek.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <title>Apartment</title>
+    <script>
+        fetch('apartment.json')
+    .then(response => response.json())
+    .then(data => {
+
+    const jewelry = document.getElementById('jewelry');
+    
+        const buttonReset = document.getElementById('all');
+        const buttonLiving = document.getElementById('living');
+        const buttonAmp = document.getElementById('amps');
+        const buttonChacha = document.getElementById('chas');
+        const buttonKarina = document.getElementById('karis');
+        const buttonNop = document.getElementById('nops');
+
+    data.forEach(item => {
+        const div = document.createElement('div');
+        const title = document.createElement('h5');
+        const p = document.createElement('p');
+        const p2 = document.createElement('p');
+        const p3 = document.createElement('p');
+        const p4 = document.createElement('p');
+        const p5 = document.createElement('p');
+        const img = document.createElement('img');
+
+        p.textContent = item.Title;
+        title.textContent = item.ObjectNumber;
+        p2.textContent = item.Brand;
+        p3.textContent = item.Owner;
+        p4.textContent = item.Location;
+        p5.textContent = item.When;
+        img.src = "img/" + item.Image;
+
+        buttonReset.addEventListener('click', function(){
+            div.style.display = "block";
+        });
+
+        buttonLiving.addEventListener('click', function(){
+            if (item.LivingType == 1) {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        });
+
+        buttonAmp.addEventListener('click', function(){
+            if (item.AbedroomType == 1) {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        });
+
+        buttonChacha.addEventListener('click', function(){
+            if (item.CbedroomType == 1) {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        });
+
+        buttonKarina.addEventListener('click', function(){
+            if (item.KbedroomType == 1) {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        });
+
+        buttonNop.addEventListener('click', function(){
+            if (item.NbedroomType == 1) {
+                div.style.display = "block";
+            } else {
+                div.style.display = "none";
+            }
+        });
+        
+        div.appendChild(img);
+        div.appendChild(title);
+        div.appendChild(p);
+        div.appendChild(p2);
+        div.appendChild(p3);
+        div.appendChild(p4);
+        div.appendChild(p5);
+        jewelry.appendChild(div);
+        });
+
+    })
+    .catch(error => console.error(error));
+    </script>
+</head>
+
+<body>
+    <nav> 
+        <div class="head">
+            <div class="title">Apartment</div>
+        </div>
+        <div class="tabs"></div>
+            <div class="about"><a class="buttons" href="about.html">About</a></div>
+            <div class="home"><a class="buttons" href="home.html">Home</a></div>
+        </div>
+    </nav>
+    
+    <hr>
+
+    <div class="filters">
+    <div class="filter">filter:</div>
+    <button id="living">living</button>
+    <button id="amps">Amp</button>
+    <button id="chas">Chacha</button>
+    <button id="karis">Karina</button>
+    <button id="nops">Nop</button>
+    <button id="all">reset</button>
+</div>
+</div>
+    <div id="jewelry" class="flex-container"></div>
+</div>
+</body>
+
+</html>
