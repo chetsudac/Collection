@@ -195,4 +195,37 @@ a:hover{
       font-size: 40px;
       text-align: center;
     }
+
+    img {
+      max-width: 400px;
+      border: solid #333333 3px;
+    }
+
+    #living {
+      background-color: #B9B5AF;
+    }
+    
+    #amps {
+      background-color: #746D69;
+    }
+    #chas {
+      background-color: #BDB0CA;
+    }
+    #karis {
+      background-color:#A5B9DC;
+    }
+    #nops{
+      background-color: #536858;
+    }
+    
+    #all{
+      background-color: gray;
+    }
+
+    h5, p {
+      font-size: 12px;
+      text-align: center;
+      padding-right: 1rem;
+      text-transform: uppercase;
+    }
   }
