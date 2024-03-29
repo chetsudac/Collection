@@ -7,20 +7,15 @@ body {
   font-size: 1.2rem;
 }
 
-
-a:link {
-  text-decoration: none;
-  text-decoration: underline;
-  color: #333333;
-}
-
 .title {
-  font-family: "work-sans", sans-serif;
+ padding: 30px;
+  font-size: 30px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Doppio One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 30px;
-  text-align: left;
-
 }
 
 hr {
@@ -59,6 +54,9 @@ img:hover {
   filter: saturate(1);
 }
 
+.filter {
+  padding-left: 15px;
+}
 
 button {
   border: solid #333333 3px;
@@ -110,5 +108,45 @@ div#jewelry {
   border-bottom: solid #333333 3px;
 }
 
+.nav {
+  display: inline;
+  justify-content: space-between;
+  font-size: 30px;
+  text-transform: uppercase;
+  justify-content: space-between;
+  font-family: "Doppio One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.title {
+  letter-spacing: 5px;
+}
 
+.tabs {
+  display: inline;
+  font-size: 30px;
+  text-transform: uppercase;
+  justify-content: space-between;
+  font-family: "Doppio One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding-left: 600px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+a{
+  text-decoration: none;
+  color: #333333;
+  font-style: normal;
+}
+
+a:hover{
+  text-decoration: underline 3px solid #333333;
+  font-style: italic;
+}
